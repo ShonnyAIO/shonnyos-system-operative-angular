@@ -24,6 +24,7 @@
     "angular-http-server": "^1.10.0",
     "buffer": "^6.0.3",
     "date-fns-tz": "^1.2.2",
+    "flexboxgrid": "^6.3.1",
     "rxfire": "^6.0.0",
     "rxjs": "~7.4.0",
     "tesseract.js": "^2.1.5",
