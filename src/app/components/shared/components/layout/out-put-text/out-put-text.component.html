@@ -1,0 +1,5 @@
+<div class="wrapper" *ngIf="textOutput">
+    <textarea class="results" #userinput cols="5" rows="5" [value]="textOutput"> </textarea>
+    <button (click)="copy(userinput)" class="order-button">Copiar</button>
+    <h2 class="avise" *ngIf="copyInfo"> Informacion copiado al texto </h2>
+</div>

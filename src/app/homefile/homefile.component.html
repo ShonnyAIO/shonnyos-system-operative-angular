@@ -1,0 +1,12 @@
+<app-header> </app-header>
+<div class="wrapper">
+    <ul class="list-file">
+        <li class="item-file" (click)="clickImage(item.buffer)" *ngFor="let item of listImages">
+            <div class="block">
+                <img [src]="item.url" alt="imagen-scan" class="input-image">
+            </div>
+        </li>
+    </ul>
+</div>
+<app-side-bar> </app-side-bar>
+<app-out-put-text> </app-out-put-text>
