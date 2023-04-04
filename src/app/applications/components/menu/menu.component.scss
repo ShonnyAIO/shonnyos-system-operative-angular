@@ -1,0 +1,37 @@
+@import './../../../../assets/styles/helpers';
+@import './../../../../assets/styles/variables';
+
+:host::ng-deep {
+    .p-menubar {
+        padding: 0 0.5rem;
+        background-color: $purple-1;
+        color: $light-0;
+        border: none;
+        font-size: 0.8rem;
+
+        .p-menuitem {
+            &:first-child {
+                font-weight: bold;
+                padding: 0 1rem;
+            }
+
+            .p-menuitem-link {
+                padding: 0.5rem 0.75rem;
+
+                .p-menuitem-text {
+                    color: $light-0;
+                }
+            }
+        }
+
+        .p-menubar-end {
+            @include flex($ai: center);
+
+            i {
+                cursor: pointer;
+                padding: 0 0.75rem;
+            }
+        }
+
+    }
+}

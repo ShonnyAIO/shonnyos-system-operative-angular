@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
+import { CoreModule } from './core/core.module';
 
 /* SERVICE */
 import { HttpClientModule } from "@angular/common/http";
@@ -18,6 +19,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    CoreModule,
+    AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
@@ -25,7 +28,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [/* WaService */],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

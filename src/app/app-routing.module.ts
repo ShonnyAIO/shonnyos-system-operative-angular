@@ -1,14 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
+import { BootComponent } from './core/boot/boot.component';
+import { LoginComponent } from './core/login/login.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
   {
-    path: '',
-    loadChildren: () => import('./homefile/homefile.module').then(m => m.FinanzasModule)
+    path: 'boot',
+    component: BootComponent
   },
-  { path: '**', redirectTo: '/', pathMatch: 'full' }
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'desktop',
+    loadChildren: () => import('./applications/applications.module').then(m => m.ApplicationsModule)
+  },
+  { path: '', redirectTo: '/boot', pathMatch: 'full' },
+  { path: '**', redirectTo: '/boot', pathMatch: 'full' }
 ];
 
 @NgModule({

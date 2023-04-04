@@ -1,0 +1,26 @@
+<div class="login-screen">
+    <img src="./../../../assets/images/golf-ball.png" alt="golf-ball" class="login-screen__logo">
+
+    <h3 class="login-screen__username">Shonny OS USER</h3>
+
+    <div class="login-screen__input">
+        <div class="p-input-icon-right">
+            <i class="pi pi-arrow-circle-right"> </i>
+            <input (keyup.enter)="openDesktop()" [(ngModel)]="password" autofocus pInputText autocomplete="off"
+                class="p-inputtext-sm" placeholder="Enter Password" type="password">
+        </div>
+    </div>
+
+    <div *ngIf="!error" class="login-screen__password-hint">
+        <p> Please Enter Password (12345678) </p>
+    </div>
+
+    <div *ngIf="error" class="login-screen__password-error">
+        <p> The password is not (12345678) </p>
+    </div>
+
+    <div class="login-screen__machine-controls">
+        <app-machine-controls></app-machine-controls>
+    </div>
+
+</div>

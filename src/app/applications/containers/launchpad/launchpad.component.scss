@@ -1,0 +1,20 @@
+@import './../../../../assets/styles/helpers';
+@import './../../../../assets/styles/variables';
+
+.launchpad {
+    @include flex($wrap: wrap, $jc: center);
+
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+        cursor: pointer;
+    }
+
+    &__item {
+
+        @include flex($dir: column, $ai: center, $jc: center);
+        @include font($size: 0.9rem, $weight: 300, $color: $light-0);
+        padding: 10px 40px;
+    }
+}

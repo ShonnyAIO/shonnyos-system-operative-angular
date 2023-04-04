@@ -20,12 +20,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-extractor-ocr",
+            "outputPath": "dist/shonny-os",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles"
+              ]
+            },
             "assets": [
               {
                 "glob": "_redirects",
@@ -39,7 +44,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss",
+              "src/assets/styles/styles.scss",
               "./node_modules/flexboxgrid/dist/flexboxgrid.min.css"
             ],
             "scripts": [],
@@ -113,7 +118,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/assets/styles/styles.scss"
             ],
             "scripts": []
           }
@@ -121,5 +126,5 @@
       }
     }
   },
-  "defaultProject": "angular-extractor-ocr"
+  "defaultProject": "shonny-os"
 }

@@ -14,16 +14,15 @@ export class AppComponent {
       const updatesAvailable = swUpdate.versionUpdates.pipe(
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
         map(evt => ({
-        type: 'UPDATE_AVAILABLE',
-        current: evt.currentVersion,
-        available: evt.latestVersion,
+          type: 'UPDATE_AVAILABLE',
+          current: evt.currentVersion,
+          available: evt.latestVersion,
         })));
-        console.log(updatesAvailable)
+      console.log(updatesAvailable)
       /* this.swUpdate.available.subscribe(() => {
         this.globalService.updateAvailable(true);
       }); */
+    }
   }
-  }
-  title = 'komerzio-front';
 }
 

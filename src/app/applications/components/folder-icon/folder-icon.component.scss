@@ -1,0 +1,44 @@
+@import 'helpers';
+@import './../../../../assets/styles/variables';
+
+.folder-icon {
+    @include flex($dir: column, $ai: center);
+    width: 100px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    &__image {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 2px;
+
+        @include bg-image($url: '/assets/images/folder.png', $size: cover, $position: center);
+
+        &.selected {
+            background-color: $purple-1;
+            box-shadow: 0 0 1px 1px $mac-grey;
+            border-radius: 2px;
+
+            &.finder {
+                background-color: $mac-grey;
+            }
+        }
+    }
+
+
+
+    &__title {
+        @include font($size: 0.7rem, $weight: 400, $color: $light-0);
+        user-select: none;
+        padding: 1px;
+
+        &.finder {
+            color: $dark-1;
+        }
+
+        &.selected {
+            background-color: $mac-sky-blue;
+            color: $light-0;
+        }
+    }
+}

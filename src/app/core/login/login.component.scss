@@ -1,0 +1,67 @@
+@import './../../../assets/styles/helpers';
+@import './../../../assets/styles/variables';
+
+.login-screen {
+    @include bg-image($url: './../../../assets/images/desktop-background.jpg', $size: cover, $position: center);
+    @include flex($dir: column, $ai: center, $jc: center);
+
+    height: 100vh;
+    color: $light-0;
+    position: relative;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+    &__logo {
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+
+    &__username {
+        color: $mac-grey;
+        text-shadow: 1px 1px $dark-0;
+        margin-bottom: 1rem;
+    }
+
+    &__input {
+
+        margin-bottom: 1rem;
+        color: $light-0;
+
+        .p-inputtext-sm {
+            background-color: rgba($color: $dark-0, $alpha: 0.1);
+            outline: none;
+            border: none;
+            border-radius: 25px;
+            color: $light-0;
+            padding-left: 20px;
+
+            &::placeholder {
+                color: $mac-grey;
+            }
+
+            &:hover,
+            &:enabled:focus {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
+
+    &__password-hint,
+    &__password-error {
+        font-size: 0.8rem;
+        text-align: center;
+        text-shadow: 1px 1px $dark-0;
+    }
+
+    &__password-error {
+        color: $mac-red;
+    }
+
+    &__machine-controls {
+        position: absolute;
+        bottom: 40px;
+    }
+}

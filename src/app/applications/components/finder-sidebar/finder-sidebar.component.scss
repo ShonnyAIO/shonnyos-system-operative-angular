@@ -1,0 +1,12 @@
+@import 'variables';
+
+
+.finder-sidebar {
+    padding: 1rem;
+    background-color: $purple-0;
+    height: 100%;
+
+    &__controls {
+        margin-bottom: 1rem;
+    }
+}

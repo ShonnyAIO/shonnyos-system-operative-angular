@@ -16,10 +16,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`Debe llamarse 'komerzio-front'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('komerzio-front');
-  });
-
 });
